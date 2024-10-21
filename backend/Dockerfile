@@ -1,0 +1,24 @@
+FROM node:20-alpine AS builder 
+
+WORKDIR /app 
+
+COPY package*.json ./ 
+
+RUN npm install 
+
+COPY . . 
+
+RUN npm run build 
+
+FROM node:20-alpine 
+
+WORKDIR /app 
+
+COPY --from=builder /app/build . 
+COPY --from=builder /app/package*.json ./ 
+
+RUN npm install  
+
+EXPOSE 3333 
+CMD ["sh", "-c", "node ace migration:fresh --force && node ace db:seed && node bin/server.js"]
+# CMD ["node", "bin/server.js"]
