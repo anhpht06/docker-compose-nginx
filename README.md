@@ -6,7 +6,7 @@ Viết docker file
 
 ## Frontend
 
-Viết docker file sự dụng nginx
+Viết docker file sử dụng nginx
 Viết file nginx trong fronend
 
 ## Thư mục gốc
