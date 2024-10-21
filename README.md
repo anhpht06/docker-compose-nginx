@@ -11,7 +11,7 @@ Viết file nginx trong fronend
 
 ## Thư mục gốc
 
-Viết docker-compose sự dụng image của 2 dockerfile backend,frontend
+Viết docker-compose sử dụng image của 2 dockerfile backend,frontend
 Tạo thư mục nginx gồm dockerfile và nginx.conf
 
 ## Trong .env của fontend
