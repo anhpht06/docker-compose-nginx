@@ -8,6 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  console.log("URL:::", import.meta.env.VITE_PRIVATE_BASE_URL);
   useEffect(() => {
     const fetchData = async () => {
       try {

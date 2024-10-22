@@ -1,0 +1,11 @@
+# Loại trừ các tệp và thư mục không cần thiết
+node_modules
+.git
+.vscode
+.DS_Store
+.env
+docker-compose.yml
+frontend/build
+backend/build
+logs
+*.log
